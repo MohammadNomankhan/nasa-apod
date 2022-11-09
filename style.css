@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4effc;
+  overflow-x: hidden;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: whitesmoke;
+  position: fixed;
+  z-index: 10;
+}
+
+/* Navigation */
+.navigation-container {
+  position: fixed;
+  top: 0;
+}
+
+.navigation-items {
+  display: flex;
+  justify-content: center;
+}
+
+.background {
+  background: #f4effc;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  z-index: -1;
+}
+
+/* clickable */
+.clickable {
+  color: #1f1235;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transition: all .5s;
+}
+
+.clickable::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: all .5s;
+}
+
+.clickable:hover {
+  filter: brightness(200%);
+}
+.clickable:hover::after {
+  width: 100%;
+}
+
+
+
+/* Images Container */
+.images-container {
+  width: 800px;
+  margin-top: 50px;
+}
+
+.card {
+  background: white;
+  margin: 10px 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+.card-body {
+  color: #e2daeb;
+  padding: 20px;
+}
+
+.card-title {
+  margin: 10px auto;
+  font-size: 24px;
+  color: #1f1235;
+}
+
+.card-text {
+  color: #1b1325;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.text-muted {
+  color: #ff6e6c;
+}
+
+/* Save Confirmation */
+.save-confirmed {
+  background: #ff6e6c;
+  color: #1f1235;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  position: fixed;
+  bottom: 25px;
+  right: 50px;
+}
+
+/* Hidden */
+.hidden {
+  display: none;
+}
+
+/* Large Smartphone (Vertical) */
+@media screen and (max-width: 800px) {
+  body {
+    line-height: 1.4rem;
+    font-size: 0.9rem;
+
+  }
+  .images-container {
+    width: 100%;
+  }
+  .save-confirmed {
+    right: 25px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-text {
+    text-align: justify;
+  }
+
+  
+}
+
+
+/* addons */
+
+.addon-1 {
+  display: inline-block;
+  color: #ff6e6c;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.addon-1:hover {
+  filter: brightness(1.1);
+}
+
